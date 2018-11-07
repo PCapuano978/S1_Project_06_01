@@ -16,31 +16,60 @@
 /* HTML Styles */
 
 html {
-    background-image: url("sd_back1.png");
-    background-attachment: fixed;
+    background-image: url('sd_back1.png');
     width: 100%;
+    background-position: fixed;
+    background-size: cover;
 }
+
+/* In all the HTML, the background is stated to be the image "sd_back1.png", with a width of 100%, a position of fixed that keeps the image from scrolling and a background size of cover to make it wrap more properly. */
 
 /* Body Styles */
 
 body {
-    background-image: url("sd_back2.png");
-    background: radial-gradient(closest-corner at 40% 70%, white 15%, rgba(151, 151, 151, 0.5) 50%);
-    background: radial-gradient(closest-corner at 80% 40%, white 15%, rgba(0, 0, 0, 0) 30%);
-    background: radial-gradient(closest-side at 10% 20%, white 20%, rgba(0, 0, 0, 0) 45%);
-    background: radial-gradient shape(5 5% at 80% 40%, white 15%, rgba(0, 0, 0, 0) 30%);
-
+    background: url('sd_back2.png'), radial-gradient(closest-corner at 40% 70%, white 15%, rgba(151, 151, 151, 0.5)50%),
+        radial-gradient(circle at 80% 40%, white 15%, rgba(0, 0, 0, 0)30%),
+        radial-gradient(closest-side at 10% 20%, white 20%, rgba(0, 0, 0, 0)45%),
+        radial-gradient(5% 5% at 90% 10%, white 15%, rgba(0, 0, 0, 0)40%), rgb(151, 151, 151);
+    box-shadow: rgb(31, 31, 31) 30px 0px 45px, rgb(31, 31, 31) -30px 0px 45px;
 }
 
+/* In the body, many radial gradients are adding in resemeling pockets of light in the background each with a white color and varing expanding values, finally rounded up with a background color of being a slight gray. A box shadow is also added for the body coving both the inside and outside of the edges.*/
 
 /* Navigation List Styles */
 
+body>header a {
+    border: 5px outset rgb(211, 211, 255);
+}
 
-
+/* All hyperlinks within the header that is nested directly within the body are given a outset with five pixels in length and a lavenderish color. */
 
 /* Section Left Styles */
 
+section#left article h1 {
+    text-shadow: 0px 0px 5px black;
+    color: rgb(211, 211, 211);
+}
 
+/* All heading ones that are nested inside articles nested inside the left section as represent with the class are set to have a text shadow that is black with five pixels of blur, and a text color of a gray shade.  */
 
+section#left img {
+    filter: drop-shadow(-15px 0px 5px rgba(51, 51, 51, 0.9)) grayscale(0.7) opacity(0.6);
+    transform: rotateY(180deg);
+}
+
+/* All images nested within the section with the id of "left" are given the filters of...
+1) A drop shadow with a horizontal offset of negative fifthteen pixels, a blur of five pixels, and a color of black accompanied by an oppacity of a nineth.
+2) A grayscale effect that is given the value of a seventh. 
+3) And a opacity of a sixth.
+
+It is also flipped horizontally by a transformarion of rotating it around the Y axis one hundred and eighty degrees.
+*/
 
 /* Footer Styles */
+
+footer {
+    border-top: 2px solid rgb(171, 171, 171);
+}
+
+/* The footer is finally given the top of its border two pixels, with a border style of solid and a color of a grayish shade. */
